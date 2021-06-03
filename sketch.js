@@ -10,22 +10,23 @@ let dim = 950;
 
 function setup() {
   // Create HTML elements and canvas
-  title = createElement('h1', 'Square from Nine Rectangles');
-  author = createElement('h3', 'Mark Bill');
-  info = createElement('p', 'Painted in 1944 in Zurich Switzerland. Acrylic on Canvas. <br> This is a perfect example of the distinctive geometric patterns and colors present in Bauhaus art. Therefore, I decided to make an interactive version of it.<br> Click on the top right corner of each rectangle to change its color. Wasn`t able to create a rotation effect. <br> Press the button below to see the rectangle fall!');
-  img = createImg('img.png','painting');
-  img.style('width', '100px');
-  img.style('height', '100px');
+  // title = createElement('h1', 'Square from Nine Rectangles');
+  // author = createElement('h3', 'Mark Bill');
+  // info = createElement('p', 'Painted in 1944 in Zurich Switzerland. Acrylic on Canvas. <br> This is a perfect example of the distinctive geometric patterns and colors present in Bauhaus art. Therefore, I decided to make an interactive version of it.<br> Click on the top right corner of each rectangle to change its color. Wasn`t able to create a rotation effect. <br> Press the button below to see the rectangle fall!');
+  // img = createImg('img.png','painting');
+  // img.style('width', '100px');
+  // img.style('height', '100px');
   canvas = createCanvas(1024, 768);
   button1 = createButton('Gravity Effect');
 
+
   // Position HTML elements in the canvas
-  title.position(30, 0);
-  author.position(30, 40);
-  img.position(30, 90);
-  info.position(30, 190);
-  button1.position(30, 290);
-  canvas.position(30, 320);
+  // title.position(30, 0);
+  // author.position(30, 40);
+  // img.position(30, 90);
+  // info.position(30, 190);
+  button1.position(50, 50);
+  canvas.position(50, 50);
 
   button1.mousePressed(gravityEffect);
 
@@ -46,20 +47,20 @@ function draw() {
   }
 
   // Add line and ellipses to the edges of the canvas
-  push();
-    strokeWeight(10);
-    stroke(153, 153, 153);
-    // fill(40, 20, 30);
-    line(0, 0, width, 0);
-    line(0, 0, 0, height);
-    line(width, height, 0, height);
-    line(width, height, width, 0);
-    // fill(255, 255, 255);
-    ellipse(25, 25, 10, 10);
-    ellipse(width - 25,  height - 25, 10, 10);
-    ellipse(width - 25, 25, 10, 10);
-    ellipse(25, height - 25, 10, 10);
-  pop();
+  // push();
+  //   strokeWeight(10);
+  //   stroke(153, 153, 153);
+  //   // fill(40, 20, 30);
+  //   line(0, 0, width, 0);
+  //   line(0, 0, 0, height);
+  //   line(width, height, 0, height);
+  //   line(width, height, width, 0);
+  //   // fill(255, 255, 255);
+  //   ellipse(25, 25, 10, 10);
+  //   ellipse(width - 25,  height - 25, 10, 10);
+  //   ellipse(width - 25, 25, 10, 10);
+  //   ellipse(25, height - 25, 10, 10);
+  // pop();
 
   // Add points using beginShape and endShape
   beginShape(POINTS);
